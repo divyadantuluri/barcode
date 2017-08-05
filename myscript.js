@@ -28,8 +28,8 @@ function init() {
 function findIndexOfItemWithBarcode(barcode) {
     
     for (index in items) {
-        console.log(items[index].id)
-        if (barcode == items[index].id) {
+        console.log(items[index].roll)
+        if (barcode == items[index].roll) {
             // found the item
             return index
         }
@@ -39,15 +39,15 @@ function findIndexOfItemWithBarcode(barcode) {
 
 function updateDetailsOfItemAtIndex(index) {
     
-    var details = "rollno:" + items[index].roll
+    var details = "name:" + items[index].name
     details += "<br>"
-    details += "name:" +items[index].name
+    details += "branch:" +items[index].branch
     details += "<br>"
-    details += "phno: "+items[index].phone
+    details += "rollno: "+items[index].roll
     details += "<br>"
-    details += "branch: " + items[index].branch
+    details += "aadharno: " + items[index].aadhar
     details +="<br>"
-    details +="aadharno:" +items[index].aadhar
+    details +="phno:" +items[index].phone
     
     document.getElementById("itemDetails").innerHTML = details
 //    console.log("id: " + items[index].id)
@@ -84,5 +84,4 @@ function getItemWithBarCode(event) {
 // https://threejs.org/docs/#manual/introduction/How-to-run-thing-locally
 
 // for beaty search bar
-// https://codepen.io/huange/pen/rbqsD
-
+// https://codepen.io/
